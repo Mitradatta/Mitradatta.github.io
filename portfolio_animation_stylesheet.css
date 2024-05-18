@@ -1,0 +1,405 @@
+
+@keyframes mymove {
+        
+    to {
+            stroke-dashoffset: 0;
+        }
+
+
+}
+
+@keyframes pathanime
+{
+    from 
+    {
+        
+        transform:  translate(60%,60%) scale(0.1);
+    } 
+    to {
+           opacity:  1;
+            transform: translate(120, 120) scale(1);
+        }
+
+}
+@keyframes fadein
+{   from
+    {
+       transform:  translateY(-100px);
+    }
+    to
+    {
+       transform:  translateY(0);   
+    }
+}
+
+
+
+
+
+
+@keyframes rotation
+{
+    20%
+    {
+        transform:  translate(-3%,-2%);
+    }
+
+    40%
+    {
+        transform:  translate(0,-2%);
+    }
+
+    60%
+    {
+        transform:  translate(1.4%,-0.5%);
+    }
+     
+    80%
+    {
+        transform:  translate(1.4%,0.5%);
+    }
+
+    100%
+    {
+        transform:  translate(0,0);
+    }
+}
+
+
+
+@keyframes leyebrowpath
+{
+   50% {
+    transform: translate(2%,-5%) rotate(40deg);
+}
+80% {
+    transform: translate(0%,-2%) rotate(25deg);
+}
+100% {
+    transform: rotate(10deg);
+}
+ 
+
+}
+@keyframes reyebrowpath
+{
+    50% {
+        
+        transform:  rotate(-10deg) translate(2%,1%);
+       
+    }
+
+    80%
+    {
+        transform:  rotate(0deg) translate(-1%,-2%);
+    }
+
+    100%
+    {
+        transform:  rotate(0deg) ;
+    }
+ 
+
+}
+
+/*#left-eyebrow
+{
+ 
+   transform-origin: 92px 199px;
+
+    animation:  leyebrowpath 2s linear infinite;
+}
+#right-eyebrow
+{
+ 
+   transform-origin: 226px 167px;
+   transform:  rotate(-20deg);
+  animation:  reyebrowpath 2s linear infinite;
+}*/
+
+@keyframes alter
+{
+    20%
+    {
+        transform:  translate(0,-2%);
+    }
+     
+    80%
+    {
+        transform:  translate(0,2%);
+    }
+
+    100%
+    {
+        transform:  translate(0,0);
+    }
+}
+
+@keyframes totalmove
+{
+    20%
+    {
+        transform:  rotateY(20deg) rotateX(10deg);
+    }
+
+    50%
+    {
+        transform:  rotateY(-40deg) rotateX(-30deg) ;
+    }
+    100%
+    {
+        transform:  rotate3d(0, 0, 0, 0deg);
+    }
+}
+/*#wholesvg
+{
+    animation:  totalmove 5s linear infinite;
+}
+*/
+
+
+@keyframes headphoneappear
+{
+    10%
+    {
+        transform:  translate(-10%,-50%);
+    }
+
+
+
+    100%
+    {
+       transform:  translate(0,0);
+    }
+}
+
+
+@keyframes leftpart
+{
+    5% {
+      transform:  translateX(-4%) scaleX(1.2);
+    }
+
+    100%
+    {
+        transform:  translate(0%,0%) scale(1);
+    }
+}
+@keyframes rightpart
+{
+    5% {
+     transform:  translateX(-16%) scaleX(1.2);
+    }
+
+    100%
+    {
+        transform:  translate(0%,0%) scale(1);
+    }
+}
+
+.skill-animation
+{
+
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    pointer-events: none;
+
+    animation: mymove  1s linear forwards;
+
+}
+
+
+.skill-animation path
+{
+    opacity: 0;
+    animation:  pathanime 1s ease-out forwards 1.2s;
+   
+
+}
+
+
+
+
+
+#eyes path
+{
+    
+    animation:  rotation 3s ease-out infinite 1s;
+   /* transform:  rotate(180deg);
+   transform-origin:  100px 100px;*/
+}
+.headphones
+{
+     animation:  headphoneappear 1s linear;
+
+}
+.left-headphone
+{
+  animation:  leftpart 1s linear infinite 2s;
+}
+.right-headphone
+{
+
+    animation:  rightpart 1s linear infinite 2s;
+}
+
+@keyframes tryingout
+{
+   30% {
+    transform: rotateX(10deg) rotateY(7deg);
+}
+
+80% {
+    transform: rotateX(0deg) rotateY(6deg);
+}
+100% {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+}
+.avatar-face
+{
+    animation:  tryingout 1.8s linear infinite 2s;
+}
+
+
+
+/*Achievements numbers animation*/
+@keyframes achievements-heading-rotate
+{
+   from
+   {
+      transform:  scaleY(0);
+  
+   }
+   to
+   {
+    transform:  scaleY(1);
+  
+   }
+}
+
+
+.achievement-heading-container-animation
+{
+    
+    transform-origin: -1% -1%;
+    animation:  achievements-heading-rotate 0.8s ease-in-out forwards;
+}
+
+
+@keyframes  fastmovement
+{
+    100%
+    {
+        transform:  translateX(0%);
+    }
+}
+
+.achievement-title-animation
+{
+     animation:  fastmovement 1s ease-in-out forwards 0.5s;
+    
+}
+
+
+@keyframes fall-in 
+{
+    0% {
+        transform:  translateY(200%);
+        opacity:  0;
+    }
+    50% {
+        transform:  translateY(100%);
+        opacity:  0;
+    }
+    100% {
+         transform:  translateY(0%);
+         opacity:  1;
+    }
+}
+
+.fallinvalues
+{
+    animation:  fall-in 0.7s linear forwards;
+}
+
+@keyframes  amazing-intro
+{
+    0%
+    {
+       transform:  rotate(-40deg);
+       opacity:  0;
+    }
+
+    100%
+    {
+        transform: rotate(0deg);
+        opacity:  1;
+    }
+}
+.achievement-areas
+{
+    transform:  rotate(-40deg);
+    opacity:  0;
+   animation:  amazing-intro 0.5s linear forwards 1s;
+}
+
+@keyframes opacity-visible
+{
+    0%
+    {
+        opacity:  0;
+    }
+    100%
+    {
+        opacity:  1;
+    }
+}
+
+.achievement-svgs
+{
+    /*display:  inline-block;*/
+    opacity:  0;
+   animation:  opacity-visible 1s linear forwards 1s;
+}
+
+
+/*Achievement numbers animation end*/
+
+/* Projects Animation Start */
+
+@keyframes project_content_anime
+{
+   from {
+    height:  0;
+   }
+}
+#project-container
+{
+    animation: project_content_anime 1s linear;
+}
+
+/*#project-container
+{
+    width:  ;
+}
+*/
+
+@keyframes fullout
+{
+    from
+    {
+        border-bottom: 0px solid #000000;
+    }
+    to
+    {
+        border-bottom: 8px solid #000000;
+    }
+    
+
+}
+
+/*#courses-heading
+{
+    animation:  fullout 0.4s linear forwards 0.5s;
+}*/
