@@ -11,90 +11,117 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
   
-<style> 
-.main-content {
-            background: #FFFFFF;
-            box-shadow: 0px 0px 132px -22px rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-            max-width: 1200px;
-        }
 
-  .gradient-div {
-            width: 100%;
-            height: 100vh; /* Full height of the viewport */
-            background: linear-gradient(to right, 
-                                        #6FB1FF 0%, #916AFF 70%, 
-                                        white 70%, white 100%);
-        }
+  <style> 
+    .main-content {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 132px -22px rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px auto;
+                max-width: 1200px;
+            }
+    
+      .main {
+                width: 100%;
+                height: 100vh; /* Full height of the viewport */
+            }
+    .gradient-div
+    {
+             width: 70%;
+                height: 100vh; /* Full height of the viewport */
+                background: linear-gradient(181.26deg, #6FB1FF 0.72%, #916AFF 97.41%) ;
+    }
 
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin: auto;
-        }
-
-        .avatar {
-            max-width: 300px;
-            height: auto;
-            margin-top: 20px;
-        }
-
-        @media (min-width: 768px) {
+     
             .header-content {
-                flex-direction: row;
-                justify-content: space-between;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: auto;
             }
-
+    
             .avatar {
-                margin-top: 0;
+                max-width: 300px;
+                height: auto;
+                margin-top: 20px;
             }
-        }
-
-
-        #body 
-        {
-          background: linear-gradient(181.26deg, #6FB1FF 0.72%, #916AFF 97.41%);
-            min-height: 100vh;
-        }
+    
+            @media (min-width: 768px) {
+                .header-content {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+    
+                .avatar {
+                    margin-top: 0;
+                }
+            }
+    
+    .absolute-class
+    {
+        position: absolute;
+min-width: 80%;
+top: 7%;
+    }
 </style>
-
-
 <body> 
 	
 
-<div class="gradient-div"> 
-<div class="container-fluid">
-  <div class="row justify-content-center">
-      <div class="col-12 col-lg-10 main-content">
-          <div class="row">
-              <div class="col-12 col-md-8 header-content">
-                  <div>
-                      <p style="font-family: 'Poppins'; font-weight: 300; font-size: 32px; margin: 10px; line-height: 76px; letter-spacing: 0.1em; color: #000000; transform: rotate(-3.14deg);">
-                          Hi!, I am <object data="developer_icon_homepage.svg" style="transform: translateY(36px);" height="60"></object>
-                      </p>
-                      <div style="font-family: 'Poppins'; font-weight: bold; font-size: 4em; line-height: 70px; letter-spacing: 0.1em; color: #1D1D1D; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                          Mitra Datta
-                      </div>
-                      <div style="font-family: 'Poppins'; font-weight: 400; font-size: 17.7392px; line-height: 51px; text-transform: capitalize; color: #CE1515; text-shadow: 0px 25.616px 21.3467px rgba(0, 0, 0, 0.25);">
-                          Mindset In pursuit Of Knowledge <br>
-                          Machine Learning <br>
-                          Data science <br>
-                          Web DevelopmenthE
-                      </div>
-                      <div style="background: #C4E2F2; border: 1.05607px solid #000000; padding: 10px; margin: 10px; border-radius: 84.486px;">
-                          let's work together
-                      </div>
-                  </div>
-                  <object data="avatar_final_animated_version.svg" class="avatar"></object>
-              </div>
-          </div>
-      </div>
-  </div>
+  <div class="main">
+    <div class="gradient-div"> </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 main-content absolute-class">
+                <div class="row">
+                    <div class="col-12 col-md-8 header-content">
+                        <div>
+                            <p style="font-family: 'Poppins'; font-weight: 300; font-size: 32px; margin: 10px; line-height: 76px; letter-spacing: 0.1em; color: #000000; transform: rotate(-3.14deg);">
+                                Hi!, I am <object data="developer_icon_homepage.svg" style="transform: translateY(36px);" height="60"></object>
+                            </p>
+                            <div style="font-family: 'Poppins'; font-weight: bold; font-size: 4em; line-height: 70px; letter-spacing: 0.1em; color: #1D1D1D; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                                <span style="white-space: nowrap;"">   Mitra Datta </span>
+                            </div>
+                            <!-- <div style="font-family: 'Poppins'; font-weight: 400; font-size: 17.7392px; line-height: 51px; text-transform: capitalize; color: #CE1515; text-shadow: 0px 25.616px 21.3467px rgba(0, 0, 0, 0.25);">
+                                Mindset In pursuit Of Knowledge <br>
+                                Machine Learning <br>
+                                Data science <br>
+                                Web DevelopmenthE
+                            </div>
+                            <div>
+                              <p style="background: #C4E2F2; border: 1.05607px solid #000000; padding: 10px; margin: 10px; border-radius: 84.486px;"> let's work together </p>
+                            </div> -->
+                            <div style="color: #190203; font-family: 'Poppins'; font-weight: 400; font-size: 17px; line-height: 1.6;
+                       ">
+                                <!-- <h1 style="font-size: 32px; color: #212529;">Hi! 👋 I am <span style="color: #D22630;">Mitra Datta</span></h1> -->
+                                <p>
+                                    Currently pursuing a passion-filled career in <strong>Machine Learning</strong> and <strong>Data Science</strong>, I am a graduate from the <strong>University of Massachusetts Amherst</strong> with a deep-rooted interest in turning data into actionable insights and intelligent systems. 🚀📊
+                                    <div style="background: #C4E2F2; border: 1px solid #000000; padding: 10px; margin-top: 10px; border-radius: 50px; display: inline-block;">
+                                        <a href="https://www.linkedin.com/in/mitra-datta-ganapaneni-47774b192/" style="text-decoration: none; color: #212529;">Let's connect on LinkedIn!</a>
+                                    </div>
+                    
+                                </p>
+                                <p>
+                                    Over the years, I have developed a robust skill set in programming and analytics, highlighted by projects in <strong>web development</strong> and <strong>algorithm optimization</strong>. My work includes building scalable models and crafting intuitive solutions that enhance user experience and business efficacy. 💻🔍
+                                </p>
+                                <!-- <p>
+                                    My journey includes impactful internships and collaborative projects that helped me hone my technical and teamwork skills. Whether it's enhancing system architectures or leading data-driven strategies, I bring a strategic perspective to the table. 🌐🤝
+                                </p>
+                                <p>
+                                    I am also an avid contributor to tech communities, sharing knowledge and learning from global professionals. Let's connect and collaborate on exciting ventures in technology and innovation! 🌟📡
+                                </p> -->
+                    
+                            </div>
+                   
+                        </div>
+                        <object data="avatar_final_animated_version.svg" class="avatar"></object>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
 </div>
-</div>
+
 <div style="box-sizing: border-box;">
   <!-- <div id="what-am-i_sticker"style="position: absolute;"> 
 
