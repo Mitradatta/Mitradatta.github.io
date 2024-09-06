@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Mitra Datta</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+         <link href="portfolio_stylesheet.css" rel="stylesheet">
+     
+         <link href="portfolio_animation_stylesheet.css" rel="stylesheet">
+
+</head>
+
+<style> 
+    .main-content {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 132px -22px rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 10px;
+                margin: 20px auto;
+                /* max-width: 1200px; */
+            }
+    
+      .main {
+                width: 100%;
+                height: 100vh; /* Full height of the viewport */
+            }
+    .gradient-div
+    {
+             width: 70%;
+                height: 100vh; /* Full height of the viewport */
+                background: linear-gradient(181.26deg, #6FB1FF 0.72%, #916AFF 97.41%) ;
+    }
+
+     
+            .header-content {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin: auto;
+            }
+    
+            .avatar {
+                max-width: 300px;
+                height: auto;
+                margin-top: 20px;
+            }
+    
+            @media (min-width: 368px) {
+                .header-content {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+    
+                .avatar {
+                    margin-top: 0;
+                    padding: 5px;
+                }
+            }
+    
+    .absolute-class
+    {
+        position: absolute;
+        min-width: 50%;
+         top: 7%;
+    }
+
+
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.3s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card-front, .flip-card-back {
+            /* position: absolute; */
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .flip-card-front {
+            background-color: #916AFF; /* Light blue */
+        }
+
+        .flip-card-back {
+            background-color: black; /* Purple */
+            transform: rotateX(180deg);
+        }
+        .bottom-nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        background: #f8f9fa;
+        border-top: 1px solid #e9ecef;
+        border-radius: 0 0 10px 10px;
+        margin-top: 20px;
+    }
+    .bottom-nav a {
+        color: #007bff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+    .sidebar {
+                box-shadow: 0px 0px 132px -22px rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 0 10px 10px 0;
+                /* margin: 20px auto; */
+        position: fixed;
+        left: 0;
+    color: #7d6ce5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: lighter;
+    
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    color: #1D1D1D;
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    
+    justify-content: space-between;
+    background: #FFFFFF;
+    top: 10%;
+    z-index: 1000;
+    white-space: nowrap; /*Prevent the text from wrapping to the next line */
+    overflow: hidden; /*Hide the overflowed text */
+     text-overflow: ellipsis;
+      width: 200px;
+      transform: translateX(-90%);
+    transition: transform 0.3s ease;
+
+        }
+
+        .sidebar:hover {
+    transform: translateX(0);
+}
+
+
+
+
+        .sidebar #profile_pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 1%;
+            transform: rotate(-1deg); 
+        
+        }
+
+        #linkedin {
+            height: 30px;
+
+        }
+        #linkedin img:hover{
+           color: red;
+        }
+
+        .sidebar p {
+            margin: 2px 0;
+        }
+
+         .sidebar a {
+            color: inherit; 
+            text-decoration: none;
+            /* margin: 10px 0; */
+            /* display: block; */
+         }
+        
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .sidebar .contact-info p {
+            margin: 3px 0;
+        }
+
+        .sidebar .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sidebar .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+    
+</style>
+    
+<body>
+
+    <div class="main">
+        <div class="sidebar">
+            <img id="profile_pic" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/profile-pic2.png" alt="Profile Photo">
+            <p style="border-top: 2px solid #c93636; margin-top: 10px;">Mitra Datta</p>
+            <div class="social-icons">
+                <a href="https://github.com/your-profile" target="_blank"> 
+                    <img id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/github-logo.svg" alt="github logo">
+                </a>
+                <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                    <img id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/linkedin-logo.svg" alt="linkedin logo">
+                 </a>
+            </div>
+            <p> Home</p>
+            <p> About </p>
+            <p> Experience</p>
+            <p> Contact </p>
+            <p> Resume </p>
+              <div>
+               <a  href="mailto:g@gmail.com" target="_blank"><p style="margin: 0 10px;font-size: 13px;font-weight: bold"><i class="fas fa-envelope"></i> gmitradatta...</p> </a>
+               <a  href="mailto:g@gmail.com" target="_blank"><p style="margin: 0 10px;font-size: 13px;font-weight: bold"><i class="fas fa-location-dot"></i> Amherst, MA</p> </a>
+               </div>
+            </div>
+            <!-- <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> g@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> vgandhi@umass.edu</p>
+                <p><i class="fas fa-map-marker-alt"></i> Amherst, Massachusetts</p>
+                <div class="social-icons">
+                    <a href="https://stackoverflow.com/questions/20984488/how-do-i-set-a-flex-container-to-be-the-width-of-its-flex-items"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div> -->
+     
+        <div class="gradient-div"> </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 main-content absolute-class">
+                    <div class="row">
+                        <div class="col-12 col-md-8 header-content">
+                            <div>
+                                <p style="font-family: 'Poppins'; font-weight: 300; font-size: 32px; margin: 10px; line-height: 76px; letter-spacing: 0.1em; color: #000000; transform: rotate(-3.14deg);">
+                                    Hi!, I am <object data="developer_icon_homepage.svg" style="transform: translateY(36px);" height="60"></object>
+                                </p>
+                                <div style="font-family: 'Poppins'; font-weight: bold; font-size: 4em; line-height: 70px; letter-spacing: 0.1em; color: #1D1D1D; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+                                    <span style="white-space: nowrap;"">   Mitra Datta </span>
+                                </div>
+                                <!-- <div style="font-family: 'Poppins'; font-weight: 400; font-size: 17.7392px; line-height: 51px; text-transform: capitalize; color: #CE1515; text-shadow: 0px 25.616px 21.3467px rgba(0, 0, 0, 0.25);">
+                                    Mindset In pursuit Of Knowledge <br>
+                                    Machine Learning <br>
+                                    Data science <br>
+                                    Web DevelopmenthE
+                                </div>
+                                <div>
+                                  <p style="background: #C4E2F2; border: 1.05607px solid #000000; padding: 10px; margin: 10px; border-radius: 84.486px;"> let's work together </p>
+                                </div> -->
+                                <div style="color: #190203; font-family: 'Poppins'; font-weight: 400; font-size: 17px; line-height: 1.6;
+                           ">
+                                    <!-- <h1 style="font-size: 32px; color: #212529;">Hi! 👋 I am <span style="color: #D22630;">Mitra Datta</span></h1> -->
+                                    <p>
+                                        Currently pursuing a passion-filled career in <strong>Machine Learning</strong> and <strong>Data Science</strong>, I am a graduate from the <strong>University of Massachusetts Amherst</strong> with a deep-rooted interest in turning data into actionable insights and intelligent systems. 🚀📊
+                                        <div style="background: #C4E2F2; border: 1px solid #000000; padding: 10px; margin-top: 10px; border-radius: 50px; display: inline-block;">
+                                            <a href="https://www.linkedin.com/in/mitra-datta-ganapaneni-47774b192/" style="text-decoration: none; color: #212529;">Let's connect on LinkedIn!</a>
+                                        </div>
+                        
+                                    </p>
+                                    <p>
+                                        Over the years, I have developed a robust skill set in programming and analytics, highlighted by projects in <strong>web development</strong> and <strong>algorithm optimization</strong>. My work includes building scalable models and crafting intuitive solutions that enhance user experience and business efficacy. 💻🔍
+                                    </p>
+                                    <!-- <p>
+                                        My journey includes impactful internships and collaborative projects that helped me hone my technical and teamwork skills. Whether it's enhancing system architectures or leading data-driven strategies, I bring a strategic perspective to the table. 🌐🤝
+                                    </p>
+                                    <p>
+                                        I am also an avid contributor to tech communities, sharing knowledge and learning from global professionals. Let's connect and collaborate on exciting ventures in technology and innovation! 🌟📡
+                                    </p> -->
+                        
+                                </div>
+                       
+                            </div>
+                            <div style="margin: auto;">
+                            <object data="avatar_final_animated_version.svg" class="avatar"></object>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div style="justify-content: center;margin: auto;clear: left">
+            <div style="background: #9C2C2C;width: 70%;display: flex;flex-direction: row; float: none !important;    display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto">
+                    <div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;
+                     width: 40%;justify-content: center;justify-self: center;align-items: center;">
+                           <div class="stats"> <p>12 months <br> Experience </p>  </div>
+                           <div class="stats"> <p>20+ <br> Projects</p> </div>
+                           <div class="stats"> <p>2  <br> Achivements </p> </div>
+                           <div class="stats"> <p>5 <br> Publications </p></div>
+                     </div>   
+                    <div style="margin-top: 30px;width: 60%;" > 
+                        <p style="margin-bottom: 0;font-weight: 500; "> SKILLS 
+                            <p style="font-family: 'Roboto';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 0.7em;
+                            line-height: 22px;
+                           text-transform: none;
+                           text-align: left;margin: 10px" >
+                            Progress of me as an engineer reflects in my skills. My passion towards bridging the practical exposure and theoritical computer science made me earn these skills. 
+                             </p>
+        
+                        </p>
+                        <div id="latest-skill-container">
+                            
+                        
+                            <div class="withprogress" > 
+                                <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/github-logo.svg" alt="github logo">
+                              
+                                  <svg width="50" height="5"  >
+                                    <rect width="50" height="5" fill="#ddd" />
+                                    <rect class="animation-skill" width="0" height="5" fill="#4b2ca3">
+                                      <animate attributeName="width" from="0" to="30" dur="2s" fill="freeze" />
+                                    </rect>
+                                  </svg>
+                            </div>
+                   
+                       
+                          <div class="withprogress" > 
+                            <img class="skill-icon" style="margin: 0" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/docker-logo.svg" alt="github logo">
+                              
+                              <svg width="50" height="5" >
+                                <rect width="50" height="5" fill="#ddd" />
+                                <rect width="0" height="5" fill="#4b2ca3">
+                                  <animate attributeName="width" from="0" to="30" dur="2s" fill="freeze" />
+                                </rect>
+                              </svg>
+                        
+                            </div>
+        
+                            
+                            
+                          <div class="withprogress" > 
+                            <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/tensorflow-logo.svg" alt="github logo">
+                             
+                              <svg width="50" height="5">
+                                <rect width="50" height="5" fill="#ddd" />
+                                <rect width="0" height="5" fill="#4b2ca3">
+                                  <animate attributeName="width" from="0" to="41" dur="2s" fill="freeze" />
+                                </rect>
+                              </svg>
+                            </div>
+                            <div class="withprogress" > 
+                                <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/keras-logo.svg" alt="github logo">
+                                 
+                                  <svg width="50" height="5" >
+                                    <rect width="50" height="5" fill="#ddd" />
+                                    <rect width="0" height="5" fill="#4b2ca3">
+                                      <animate attributeName="width" from="0" to="40" dur="2s" fill="freeze" />
+                                    </rect>
+                                  </svg>
+                                </div>
+                            <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/mysql-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="45" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                                <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/python-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                        
+                             <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/java-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="41" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                            <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/js-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="48" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                            <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/html5-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+        
+                            <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/css3-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="20" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                            <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/git-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                            <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/database-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="40" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+        
+                                <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/cloud-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="25" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                                <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/aws-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+        
+                                <div class="withprogress" > 
+                                    <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/mongodb-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="5" >
+                                        <rect width="50" height="5" fill="#ddd" />
+                                        <rect width="0" height="5" fill="#4b2ca3">
+                                          <animate attributeName="width" from="0" to="45" dur="2s" fill="freeze" />
+                                        </rect>
+                                      </svg>
+                                </div>
+                     
+                    
+                         
+                     
+        
+                     
+                    
+                            <!-- <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/git-logo.svg" alt="github logo">
+        
+                            <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/database-logo.svg" alt="github logo">
+        
+                            <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/cloud-logo.svg" alt="github logo">
+        
+                            <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/aws-logo.svg" alt="github logo">
+        
+                            <img class="skill-icon" id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/mongodb-logo.svg" alt="github logo">  -->
+                         </div>
+                   </div>
+            </div>
+        </div> 
+    </div>
+    <div style="box-sizing: border-box;">
+        <!-- <div id="what-am-i_sticker"style="position: absolute;"> 
+      
+       <object id="objsticker" type="image/svg+xml" data="What_am_i_obj.svg" style="width:  90%;margin-left: 60px;margin-top: 120px" > 
+             <img src="What_am_i_obj.svg" >  
+      
+          </object>
+        
+      
+       </div> -->
+        <div>
+          <div  id="wai_1"class="what-am-i" style="background: #2F2F2F;margin-left: 80px">
+              <div style="margin-top: 100px;"> front-end <br> developer </div>
+              <img style="margin-top: 100px" src="front_end_svg.svg" width="120px">
+          </div>
+          <div id="wai_2" class="what-am-i" style="background:  #9C2C2C;">
+              <div style="margin-top: 100px;"> MACHINE LEARNING ENTHUSIAST </div>
+              <img style="margin-top: 100px;" src="ml_pic.png" width="120px">
+          </div> 
+          <div id="wai_3" class="what-am-i" style="background: #FF5A5A;">
+              <div style="margin-top: 100px;" > COMPETITIVE <br>CODER </div>
+              <img style="margin-top: 100px;" src="competitive_pic.png" width="120px">
+          </div> 
+       </div>
+      </div>
+      <div style="width: 100%;height: 600px;clear: left;"> 
+        <div id="project-names-container" style="float: left;width: 30%">
+            <div>
+            <div id="upper-1"> 
+              <p id="heading-projects" style="font-family: 'Roboto';"> PROJECTS </p>
+             <ul id="projects-list">
+                <li> <a href=""> SORTING VISUALIZER </a> </li>
+                <br>
+                <li> <a href="">IMAGE PROCESSING TOOL </a></li>
+                <br>
+                <li> <a href=""> CUSTOMER SEGMENTATION </a></li>
+                <br>
+                <li> <a href=""> CUSTOMER SEGMENTATION </a></li>
+                <br>
+                <li> <a href=""> CUSTOMER SEGMENTATION </a></li>
+             </ul>
+           </div>
+           <!--  <div id="upper-2" >
+            </div> -->
+          </div>
+        </div>
+        <div id="project-container" style="float: left" >
+            <p class="project-content">
+            Highly visualized project aimed at understanding the inner working of sorting algorithms.Soritng Algorithms covered are  BubbleSort,MergeSort,InsertionSort,QuickSort
+            </p>
+            <p  class="project-links" > 
+            Project link: mitradatta.com <br>
+             Github Repo: @MitraDatta
+            </p>
+        </div>
+    </div>
+
+    <!-- <script>
+        const roles = ['Software Developer', 'ML Engineer', 'Data Scientist', 'Web Developer'];
+        let currentRoleIndex = 0;
+        
+        function updateRole() {
+            const flipCardInner = document.querySelector('.flip-card-inner');
+            const frontText = roles[currentRoleIndex % roles.length];
+            const backText = roles[(currentRoleIndex + 1) % roles.length];
+
+            if (flipCardInner.style.transform === "rotateX(180deg)") {
+                flipCardInner.style.transform = "rotateX(0deg)";
+                flipCardInner.querySelector('.flip-card-front').textContent = frontText;
+            } else {
+                flipCardInner.style.transform = "rotateX(180deg)";
+                flipCardInner.querySelector('.flip-card-back').textContent = backText;
+            }
+
+            currentRoleIndex++;
+        }
+
+        setInterval(updateRole, 2000); // Change role every 2 seconds
+    </script> -->
+
+<script src="./scrolled_into_view_check.js"> </script>
+</body>
+
+</html> 
+
+

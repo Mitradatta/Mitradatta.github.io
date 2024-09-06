@@ -82,14 +82,14 @@ function numberanimate(skillelement,x)
 {
    skillvalue = skillelement.getAttribute('value');
    var value = parseInt(skillvalue);
-
+   console.log(skillelement,x,value);
    var c=300;
    // console.log(x);
    skillelement.innerText = parseInt(0);
    var initial = 0;
    if(x==1)
    {
-      step = 4;
+      step =7;
    }
    else if(x==2)
    {
@@ -131,11 +131,12 @@ function setvalue()
     { 
       if(i==0)
       {
-          setTimeout(decimalanimate,800,a[i]);
+           //decimalanimate - function for decimal values animation - setTimeout(decimalanimate,800,a[i]);
+          setTimeout(numberanimate,800,a[i],1);
       }
       else
       {
-      setTimeout(numberanimate,c,a[i],i);
+          setTimeout(numberanimate,c,a[i],i);
       }
     }  
 
@@ -213,6 +214,7 @@ function callback3(entries,observer)
   });
 }
 
+
 function callback4(entries,observer)
 {
     entries.forEach(entry => {
@@ -235,6 +237,40 @@ function callback4(entries,observer)
   );
 }
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+
+        let svgElement = entry.target;
+        console.log(svgElement);
+          if (entry.isIntersecting) {
+                  svgElement.style.transition = 'width 1s ease-out';  
+
+                  let value = svgElement.getAttribute('value');
+                  if (value) {
+
+                    setTimeout(() => {
+                      svgElement.style.width = `${value}%`;  // Use the value attribute to set width
+                  }, 50);
+                  
+                  }
+          } else {
+             svgElement.style.transition = 'none';  
+              svgElement.style.width = '0';  // Reset width when out of view
+              }
+    
+          });
+      });
+
+
+  // Start observing the skillbars
+  let elements = document.getElementsByClassName("skill-bar");
+  for (let i = 0; i < elements.length; i++) {
+      observer.observe(elements[i]);
+  }
+});
+
 let options = {
     root: null,
     rootMargin: '0px',
@@ -254,15 +290,15 @@ let observer2 = new IntersectionObserver(callback2,options);
 let observer3 = new IntersectionObserver(callback3,options2);
 let observer4 = new IntersectionObserver(callback4,options);
 
-  observer1.observe(document.querySelector('#whole1'));
-  observer1.observe(document.querySelector('#whole2'));
-  observer1.observe(document.querySelector('#whole3'));
-  observer1.observe(document.querySelector('#whole4'));
-  observer1.observe(document.querySelector('#whole5'));
-  observer1.observe(document.querySelector('#whole6'));
-  observer2.observe(document.querySelector('#a1'));
-  observer3.observe(document.querySelector('#wai_1'));
-  observer3.observe(document.querySelector('#wai_2'));
-  observer3.observe(document.querySelector('#wai_3'));
-  observer4.observe(document.querySelector('#achievements-heading'));
-
+  // observer1.observe(document.querySelector('#whole1'));
+  // observer1.observe(document.querySelector('#whole2'));
+  // observer1.observe(document.querySelector('#whole3'));
+  // observer1.observe(document.querySelector('#whole4'));
+  // observer1.observe(document.querySelector('#whole5'));
+  // observer1.observe(document.querySelector('#whole6'));
+  // observer2.observe(document.querySelector('#a1'));
+  observer2.observe(document.querySelector('#stats1'));
+  // observer3.observe(document.querySelector('#wai_1'));
+  // observer3.observe(document.querySelector('#wai_2'));
+  // observer3.observe(document.querySelector('#wai_3'));
+  // observer4.observe(document.querySelector('#achievements-heading'));
