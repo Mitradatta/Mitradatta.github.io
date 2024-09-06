@@ -8,6 +8,7 @@
          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
          <link href="portfolio_stylesheet.css" rel="stylesheet">
          <link href="portfolio_animation_stylesheet.css" rel="stylesheet">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
   
@@ -28,7 +29,7 @@
             }
     .gradient-div
     {
-               width: 70%;
+             width: 70%;
                 height: 100vh; /* Full height of the viewport */
                 background: linear-gradient(181.26deg, #6FB1FF 0.72%, #916AFF 97.41%) ;
     }
@@ -64,23 +65,633 @@
 min-width: 80%;
 top: 7%;
     }
+
+    .skills
+    {
+    
+        font-size: 0.8em;
+    }
+
+    .skills > *{
+        display: inline-block;
+    }
+
+    @keyframes backgroundColorChange {
+    0% {
+        background-color: #ff0000; /* Start color */
+    }
+    25% {
+        background-color: #00ff00; /* Midpoint color */
+    }
+    50% {
+        background-color: #0000ff; /* Midpoint color */
+    }
+    75% {
+        background-color: #ffff00; /* Midpoint color */
+    }
+    100% {
+        background-color: #ff0000; /* End color (same as start) */
+    }
+}
+
+.animated-background {
+    animation: backgroundColorChange 10s infinite;
+}
+
+.stats {
+    border: 5px solid black;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 18px -14px 4px 2px rgba(0, 0, 0, 0.27);
+}
+
+
+
+.stats p{
+    text-align: center;
+    align-items: center;
+   color: black;
+   padding: 10px;
+   font-size: 2.3vh;
+   text-transform: none; 
+
+
+
+}
+
+#latest-skill-container{
+  
+    background-color: white;
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+
+   
+}
+
+
+
+.skill-icon{
+    height: 70px;
+    width: 70px;
+   
+    color: white;
+    padding: 5px;
+    /* filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2)); */
+
+}
+
+.withprogress {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+  flex-direction: column;
+   align-items: center;
+
+    flex-wrap: wrap;
+    align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+
+}
+
+.bubble {
+         animation: bubble 0.1s ease-in-out forwards;
+        }
+
+
+
+
+        @keyframes bubble {
+            0% {
+                opacity: 0.5;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+.withprogress:hover {
+    transform:  scale(1.5) ;
+}
+/* .skill-icon:hover {
+    transform:  scale(2.2) ;
+    color: white;
+} */
+
+/* Section styling */
+.section {
+
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    padding-top: 10px;
+    width: 80%;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 24px;
+    color: black;
+    margin: auto;
+    text-align: center;
+}
+
+.section-icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid grey;
+    border-radius: 18px;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 0;
+    background-color: #c4e2f2;
+}
+
+.icon-container {
+  display: flex;
+  justify-items: center;
+}
+.timeline {
+    border-left: 2px solid #4b2ca3;
+    padding-left: 20px;
+    position: relative;
+    margin-left: 33px;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.timeline-item h3 {
+    font-size: 20px;
+    color: #5c4c4c;
+}
+
+.timeline-duration {
+    font-size: 18px;
+    color: #4b2ca3;
+    /* color: #f9c743; */
+    margin-top: 5px;
+}
+
+
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -26px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: #f9c744;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px hsl(0, 0%, 22%);
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 10px;
+    }
+
+    .timeline-item {
+        padding-left: 10px;
+    }
+
+    .section-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+.timeline-content {
+    font-size: 1em;
+}
+
+.sidebar {
+                box-shadow: 0px 0px 132px -22px rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                border-radius: 0 10px 10px 0;
+                /* margin: 20px auto; */
+        position: fixed;
+        left: 0;
+    color: #7d6ce5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins';
+    font-weight: lighter;
+    
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    color: #1D1D1D;
+    /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    
+    justify-content: space-between;
+    background: #FFFFFF;
+    top: 10%;
+    z-index: 1000;
+    white-space: nowrap; /*Prevent the text from wrapping to the next line */
+    overflow: hidden; /*Hide the overflowed text */
+     text-overflow: ellipsis;
+      width: 200px;
+      transform: translateX(-90%);
+    transition: transform 0.3s ease;
+
+        }
+
+        .sidebar:hover {
+    transform: translateX(0);
+}
+
+
+
+
+        .sidebar #profile_pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 1%;
+            transform: rotate(-1deg); 
+        
+        }
+
+        #linkedin {
+            height: 30px;
+
+        }
+        #linkedin img:hover{
+           color: red;
+        }
+
+        .sidebar p {
+            margin: 2px 0;
+        }
+
+         .sidebar a {
+            color: inherit; 
+            text-decoration: none;
+            /* margin: 10px 0; */
+            /* display: block; */
+         }
+        
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .sidebar .contact-info p {
+            margin: 3px 0;
+        }
+
+        .sidebar .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sidebar .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+    
+
+
+        #project-categories button {
+    background-color: #282C34;
+    color: #61DAFB;
+    border: none;
+    padding: 10px 20px;
+        border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#project-categories button:hover {
+    background-color: #61DAFB;
+    color: #20232A;
+}
+
+#projects-grid {
+    margin-top: 20px;
+}
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.project-item img {
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.05);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 8px;
+    color: white;
+    border-top-right-radius: 8px;
+    font-size: 12px;
+    transition: all 0.2s;
+
+}
+
+
+.project-info h3, .project-info p {
+    margin: 0;
+}
+
+.project-info h3 {
+    font-size: 1.2em;
+}
+
+.project-info p {
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+.projects-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .projects-header {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .filter {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .filter a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: #F5F5F5;
+            font-size: 18px;
+        }
+
+        .filter a.active {
+            color: #FFD700;
+            border-bottom: 2px solid #FFD700;
+            padding-bottom: 5px;
+        }
+
+        .projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .project-card {
+            background-color: #333;
+            border-radius: 15px;
+            overflow: hidden;
+            width: calc(30.333% - 20px);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: all 0.5s;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+
+        .project-category {
+            font-size: 16px;
+            color: #B0B0B0;
+        }
+
+
+        #heading-projects::after {
+            content: '';
+    position: absolute;
+    left: 0;
+    bottom: -13px;
+    width: 80px;
+    height: 6px;
+    background-color: #FFD700;
+    border-radius: 0px 10px;
+}
+
+#heading-projects:hover {
+    letter-spacing: 0.1em;
+}
+
+
+
+.project-card:hover .project-title {
+    font-size: 24px;
+  color: #FFD700; /* Change to yellow on hover */
+}
+
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+   
+    margin: auto;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.contact-left a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    background-color:white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon:hover {
+    background-color: #ffd602;
+}
+
+.email-icon::before {
+    content: url('mail.png');
+  
+}
+
+.location-icon::before {
+    content: url('location.png');
+}
+
+.github-icon::before {
+    content: url('github-logo.svg');
+}
+
+.linkedin-icon::before {
+    content: url('linkedin-logo.svg');
+}
+
+.text {
+    color: #e0e0e0;
+    font-size: 18px;
+}
+
+
+
+
+.contact-icons-latest
+{
+    background: #ffffff3b;
+   color: #ffd602;
+   font-size: 30px;
+   padding: 10px;
+   border-radius: 5px;
+   margin: 5px;
+}
+
+#main-linkedin {
+    background: #C4E2F2; 
+    border: 1px solid #000000; 
+    padding: 10px; 
+    margin-top: 10px; 
+    border-radius: 50px; 
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+#main-linkedin:hover {
+    background-color: #c23535;
+    color: white;
+    cursor: pointer;
+
+}
+
+.hidden {
+            display: none;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .appear {
+        animation: appear 1s forwards;
+      }
+
+
+      footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+}
+    
 </style>
 <body> 
 	
 
   <div class="main">
-    <div class="gradient-div"> </div>
+    <div class="sidebar">
+        <img id="profile_pic" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/profile-pic2.png" alt="Profile Photo">
+        <p style="border-top: 2px solid #c93636; margin-top: 10px;">Mitra Datta</p>
+        <div class="social-icons">
+            <a href="https://github.com/your-profile" target="_blank"> 
+                <img id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/github-logo.svg" alt="github logo">
+            </a>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+                <img id="linkedin" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/linkedin-logo.svg" alt="linkedin logo">
+             </a>
+        </div>
+        <p> <a href="#">Home </a></p>
+        <p> <a href="#aboutme">About</a></p>
+        <p>  <a href="#experience">Experience</a></p>
+        <p>  <a href="#contact-heading">Contact </a> </p>
+        <p> <a href="https://drive.google.com/file/d/13QvSxavZuIKBC-6bPFV3oCfNV6yQa5pb/view?usp=drive_link" target="_blank" >Resume</a> </p>
+          <div>
+           <a  href="mailto:gmitradatta2001@gmail.com" target="_blank"><p style="margin: 0 10px;font-size: 13px;font-weight: bold"><i class="fas fa-envelope"></i> gmitradatta...</p> </a>
+           <a  href="mailto:gmitradatta2001@gmail.com" target="_blank"><p style="margin: 0 10px;font-size: 13px;font-weight: bold"><i class="fas fa-location-dot"></i> Amherst, MA</p> </a>
+           </div>
+        </div>
+    <div  class="gradient-div"> </div>
+   
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10 main-content absolute-class">
-                <div class="row">
+                <div  class="row">
                     <div class="col-12 col-md-8 header-content">
                         <div>
                             <p style="font-family: 'Poppins'; font-weight: 300; font-size: 32px; margin: 10px; line-height: 76px; letter-spacing: 0.1em; color: #000000; transform: rotate(-3.14deg);">
                                 Hi!, I am <object data="developer_icon_homepage.svg" style="transform: translateY(36px);" height="60"></object>
                             </p>
                             <div style="font-family: 'Poppins'; font-weight: bold; font-size: 4em; line-height: 70px; letter-spacing: 0.1em; color: #1D1D1D; text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
-                                <span style="white-space: nowrap;"">   Mitra Datta </span>
+                                <span style="white-space: nowrap;">   Mitra Datta </span>
                             </div>
                             <!-- <div style="font-family: 'Poppins'; font-weight: 400; font-size: 17.7392px; line-height: 51px; text-transform: capitalize; color: #CE1515; text-shadow: 0px 25.616px 21.3467px rgba(0, 0, 0, 0.25);">
                                 Mindset In pursuit Of Knowledge <br>
@@ -96,8 +707,8 @@ top: 7%;
                                 <!-- <h1 style="font-size: 32px; color: #212529;">Hi! 👋 I am <span style="color: #D22630;">Mitra Datta</span></h1> -->
                                 <p>
                                     Currently pursuing a passion-filled career in <strong>Machine Learning</strong> and <strong>Data Science</strong>, I am a graduate from the <strong>University of Massachusetts Amherst</strong> with a deep-rooted interest in turning data into actionable insights and intelligent systems. 🚀📊
-                                    <div style="background: #C4E2F2; border: 1px solid #000000; padding: 10px; margin-top: 10px; border-radius: 50px; display: inline-block;">
-                                        <a href="https://www.linkedin.com/in/mitra-datta-ganapaneni-47774b192/" style="text-decoration: none; color: #212529;">Let's connect on LinkedIn!</a>
+                                    <div id="main-linkedin" >
+                                        <a href="https://www.linkedin.com/in/mitra-datta-ganapaneni-47774b192/" target="_blank" style="text-decoration: none; color: inherit;">Let's connect on LinkedIn!</a>
                                     </div>
                     
                                 </p>
@@ -114,348 +725,452 @@ top: 7%;
                             </div>
                    
                         </div>
+                        <div style="margin: auto;">
                         <object data="avatar_final_animated_version.svg" class="avatar"></object>
+                        </div>
+                    </div>
+        
+                    
+                </div>
+        
+                <div style="justify-content: center;margin: 50px;margin-bottom: 10px;clear: left;">
+    
+                    <div  id="wai_1"  style="display: flex;flex-direction: row; float: none !important;    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    width: 80%;
+                    margin: auto">
+                   
+                            <div id="aboutme"style="display: flex;flex-direction: row;flex-wrap: wrap;
+                              background: #9C2C2C;margin: auto;justify-content: space-evenly;width: 100%;">
+                                   <div class="stats" id="stats1"> <p>   <span class="achievements-values" value="12" > 0</span>months <br> Experience </p>  </div>
+                                   <div class="stats"> <p><span class="achievements-values" value="10" > 0</span> + <br> Projects</p> </div>
+                                   <div class="stats"> <p><span class="achievements-values" value="3" > 0</span>  <br> Achievements </p> </div>
+                                   <div class="stats"> <p><span class="achievements-values" value="2" > 0</span> <br> Publications </p></div>
+                             </div>   
+                            <div style="margin-top: 30px;"> 
+                                <div id="courses-heading" style="margin-bottom: 0;text-align: center;margin: 10px;display: inline-block;align-items: center;display: flex;
+                                justify-content: center;">
+                                    <p style="margin: 0px 30px">SKILLS</p>
+                                    </div>
+                                <div id="latest-skill-container">
+                                    
+                                
+                                    <div class="withprogress" > 
+                                        <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/github-logo.svg" alt="github logo">
+                                      
+                                          <svg width="50" height="8"  >
+                                            <rect width="50" height="8" fill="#ddd" />
+                                            <rect  class="skill-bar" value="75" width="0"  height="8" fill="#4b2ca3">
+                                                <!-- <animate attributeName="width" from="0" to="30" dur="2s" fill="freeze" /> -->
+                                              </rect>
+                                        </svg>     
+                                    </div>
+                        
+                                    
+                                
+                                        <div class="withprogress" > 
+                                            <img class="skill-icon" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/linux-logo.svg" alt="github logo">
+                                          
+                                              <svg width="50" height="8"  >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="55" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="30" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                            </svg>     
+                                        </div>
+                        
+                                        <div class="withprogress" > 
+                                            <img class="skill-icon" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/django-logo.svg" alt="github logo">
+                                          
+                                              <svg width="50" height="8"  >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="75" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="30" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                            </svg>   
+                                        </div>
+                           
+                               
+                                  <div class="withprogress" > 
+                                    <img class="skill-icon" style="margin: 0"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/docker-logo.svg" alt="github logo">
+                                      
+                                      <svg width="50" height="8" >
+                                        <rect width="50" height="8" fill="#ddd" />
+                                        <rect class="skill-bar" value="35" width="0" height="8" fill="#4b2ca3">
+                                          <!-- <animate attributeName="width" from="0" to="30" dur="2s" fill="freeze" /> -->
+                                        </rect>
+                                      </svg>
+                                
+                                    </div>
+                
+                                    
+                                    
+                                  <div class="withprogress" > 
+                                    <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/tensorflow-logo.svg" alt="github logo">
+                                     
+                                      <svg width="50" height="8">
+                                        <rect width="50" height="8" fill="#ddd" />
+                                        <rect class="skill-bar" value="35" width="0" height="8" fill="#4b2ca3">
+                                          <!-- <animate attributeName="width" from="0" to="41" dur="2s" fill="freeze" /> -->
+                                        </rect>
+                                      </svg>
+                                    </div>
+                                    <div class="withprogress" > 
+                                        <img class="skill-icon" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/keras-logo.svg" alt="github logo">
+                                         
+                                          <svg width="50" height="8" >
+                                            <rect width="50" height="8" fill="#ddd" />
+                                            <rect class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                              <!-- <animate attributeName="width" from="0" to="40" dur="2s" fill="freeze" /> -->
+                                            </rect>
+                                          </svg>
+                                        </div>
+                                    <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/mysql-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85"  width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="45" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                        <div class="withprogress" > 
+                                            <img class="skill-icon" src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/python-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                
+                                     <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/java-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect  class="skill-bar" value="85"width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="41" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                    <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/js-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85"width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="48" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                    <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/html5-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                
+                                    <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/css3-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="20" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                    <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/git-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                    <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/database-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect  class="skill-bar" value="85"width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="40" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                
+                                        <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/cloud-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect  class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="25" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                        <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/aws-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="50" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                
+                                        <div class="withprogress" > 
+                                            <img class="skill-icon"  src="/Users/mitradatta/Desktop/Mitra_Datta/Mitradatta.github.io/mongodb-logo.svg" alt="github logo">
+                                             
+                                              <svg width="50" height="8" >
+                                                <rect width="50" height="8" fill="#ddd" />
+                                                <rect class="skill-bar" value="85" width="0" height="8" fill="#4b2ca3">
+                                                  <!-- <animate attributeName="width" from="0" to="45" dur="2s" fill="freeze" /> -->
+                                                </rect>
+                                              </svg>
+                                        </div>
+                                 </div>
+                           </div>
+                    </div>
+                </div> 
+                <div class="section">
+                    <div class="icon-container">
+                        <div> 
+                        <img src="education-logo.svg" alt="Education Icon" class="section-icon">
+                        </div>
+                        <div style="display: flex;">
+                        <p class="section-title">Education</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3>Manning College Of Information And Computer Sciences @ UMass</h3>
+                            <span class="timeline-duration">September 2023 — Current</span>
+                            <p>Machine Learning, Neural Networks, Information Retrieval, Computer Network and Security, Advanced NLP</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>SRM University, AP</h3>
+                            <span class="timeline-duration"> August 2019 - June 2023</span>
+                            <p>Computer Science: Software Engineering, Deep Learning, AI, Operating Systems, Database, Software Engineering, Mathematics, English</p>
+                        </div>
                     </div>
                 </div>
+                <div id="experience" class="section">
+                    <div class="icon-container">
+                        <div> 
+                        <img src="work-logo.svg" style="padding: 10px"alt="Education Icon" class="section-icon">
+                        </div>
+                        <div style="display: flex;">
+                        <p class="section-title"> Experience</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3> Research Intern @ Carnegie Mellon University </h3>
+                            <span class="timeline-duration"> April 2022 — August 2022</span>
+                            <p>Remote, India</p>
+                            <ul class="timeline-content">
+                                <li>Analyzed ECG waveforms and employed a neural network pipeline with Keras Sequential API to forecast patients’ cardiovascular conditions, achieving a 90% accuracy rate in prediction.</li>
+                                <li>Developed a centralized web-based platform with React.Js and Flask to deploy proposed models that automated to assist in clinical diagnosis and prognosis of nearly 2000 patients and reduced manual analysis time by 24%.</li>
+                                 <li>Carried out survival analysis of post-thoracic transplantation patients who used the Intra-aortic balloon pump and Impella device using required statistical tests.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item">
+                            <h3>Web Developer Intern @ 360 Research Foundation</h3>
+                            <span class="timeline-duration">May 2021 — July 2021</span>
+                            <p>Remote, India</p>
+                            <ul class="timeline-content">
+                                <li>Developed a user-focused website tailored to client specifications, utilizing Figma for design and Bootstrap for front-end implementation to ensure a modern and responsive user experience.</li>
+                                <li>Built an intuitive e-commerce portal incorporating a DOM-based shopping cart and leveraging the latest web frameworks to enhance user engagement and provide an immersive shopping experience.</li>
+                                <li>Integrated new features that boosted revenue by approximately 10% and contributed to expanding the organization’s market presence.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 90%;margin: auto;"> 
+                    <div id="project-container" style="margin: auto">
+                        <div class="filter" >
+                            <p id="heading-projects" style="font-family: 'Roboto';"> PROJECTS </p>
+                            <a href="" id="all-projects" class="active">All</a>
+                            <a href=""id="system-projects">Systems Programming</a>
+                            <a  href=""id="ml-projects">Machine Learning</a>
+                            <a  href=""id="web-projects">Web Development</a>
+                        </div>
+                     
+                        <div class="projects-grid">
+                            <div class="project-card" data-category="w">
+                                <img src="project_tic.png" alt="TicTacAI" class="project-image">
+                                <div class="project-info">
+                                    <div class="project-title">TicTacAI</div>
+                                    <div class="project-category">Web Development</div>
+                                </div>
+                            </div>
+                            <div class="project-card" data-category="w">
+                                <img src="project_sort.png" alt="SortVis" class="project-image">
+                                <div class="project-info">
+                                    <div class="project-title">SortVis</div>
+                                    <div class="project-category">Web Development</div>
+                                </div>
+                            </div>
+                            <div class="project-card" data-category="s">
+                                <img src="project_tool.png" alt="Simon Game" class="project-image">
+                                <div class="project-info">
+                                    <div class="project-title">ImgProcessor</div>
+                                    <div class="project-category">Systems Programming</div>
+                                </div>
+                            </div>
+                            <div class="project-card" data-category="s">
+                                <img src="project_sort.png" alt="Binary Buddy Allocator" class="project-image">
+                                <div class="project-info">
+                                    <div class="project-title">Binary Buddy Allocator</div>
+                                    <div class="project-category">Systems Programming</div>
+                                </div>
+                            </div>
+                            <div class="project-card" data-category="m">
+                                <img src="project_tic.png" alt="FlickFinder" class="project-image">
+                                <div class="project-info">
+                                    <div class="project-title">FlickFinder</div>
+                                    <div class="project-category">Machine Learning</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div style="margin: auto;width: 100%;height: 90vh;margin-top: 40px;margin-bottom: 40px;">
+                <iframe src="my_resume.pdf#zoom=125" style="width:100%;height: 90vh;" ></iframe>
+                </div> -->
+                <div id="contact-heading" style="margin: 10px;margin-top: 50px;margin-bottom: 50px;"> <span id="heading-text">Contact Me </span></div>
+                <div class="contact-section">
+                    <div class="contact-left">
+                        <div class="contact-item">
+                            <div  class="fas fa-envelope contact-icons-latest"></div>
+                            <div class="text"><a href="mailto:gmitradatta2001@gmail.com"> gmitradatta2001@gmail.com  </a></div> 
+                            <div class="text"> ,<a href="mailto:mganapaneni@umass.edu"> mganapaneni@umass.edu</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="fas fa-location-dot contact-icons-latest"></div>
+                            <div class="text">Amherst, Massachusetts</div>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <div class="contact-item  contact-icons-latest">  
+                                <div class="icon"> <object data="github-logo.svg"> <a href="https://github.com/Mitradatta" target="_blank"></a></object> </div>
+
+                        </div>
+                        <div class="contact-item contact-icons-latest">
+                                <div class="icon"> <object data="linkedin-logo.svg"> <a href="https://linkedin.com/in/yourusername" target="_blank"></a></object></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <p> Developed by Mitra Datta &copy; 2024</p>
+                  </footer>
+                
+                
             </div>
         </div>
+ 
      </div>
+     
 </div>
 
-<div style="box-sizing: border-box;">
-  <!-- <div id="what-am-i_sticker"style="position: absolute;"> 
-
- <object id="objsticker" type="image/svg+xml" data="What_am_i_obj.svg" style="width:  90%;margin-left: 60px;margin-top: 120px" > 
-       <img src="What_am_i_obj.svg" >  
-
-    </object>
-  
-
- </div> -->
-  <div>
-    <div  id="wai_1"class="what-am-i" style="background: #2F2F2F;margin-left: 80px">
-        <div style="margin-top: 100px;"> front-end <br> developer </div>
-        <img style="margin-top: 100px" src="front_end_svg.svg" width="120px">
-    </div>
-    <div id="wai_2" class="what-am-i" style="background:  #9C2C2C;">
-        <div style="margin-top: 100px;"> MACHINE LEARNING ENTHUSIAST </div>
-        <img style="margin-top: 100px;" src="ml_pic.png" width="120px">
-    </div> 
-    <div id="wai_3" class="what-am-i" style="background: #FF5A5A;">
-        <div style="margin-top: 100px;" > COMPETITIVE <br>CODER </div>
-        <img style="margin-top: 100px;" src="competitive_pic.png" width="120px">
-    </div> 
- </div>
-</div>
-
-<!-- <div style="width: 100%;height: 600px;clear: left;"> 
-    <div id="project-names-container" style="float: left;width: 30%">
-        <div>
-        <div id="upper-1"> 
-          <p id="heading-projects" style="font-family: 'Roboto';"> PROJECTS </p>
-         <ul id="projects-list">
-            <li> <a href=""> SORTING VISUALIZER </a> </li>
-            <br>
-            <li> <a href="">IMAGE PROCESSING TOOL </a></li>
-            <br>
-            <li> <a href=""> CUSTOMER SEGMENTATION </a></li>
-            <br>
-            <li> <a href=""> CUSTOMER SEGMENTATION </a></li>
-            <br>
-            <li> <a href=""> CUSTOMER SEGMENTATION </a></li>
-         </ul>
-       </div>
-  
-      </div>
-    </div>
-    <div id="project-container" style="float: left" >
-        <p class="project-content">
-        Highly visualized project aimed at understanding the inner working of sorting algorithms.Soritng Algorithms covered are  BubbleSort,MergeSort,InsertionSort,QuickSort
-        </p>
-        <p  class="project-links" > 
-        Project link: mitradatta.com <br>
-         Github Repo: @MitraDatta
-        </p>
-    </div>
-</div> -->
-
-<div> 
-   <div id="achievements-heading"> <span id="heading-for-animation">Achievements </span></div>
-   <div id="achievements-container"> 
-     <div>
-         <img class="achievement-svgs" src="cgpa.svg" width="110px" height="100px"> 
-         <div id="a1" style="display:  inline-block;width:  80px;border-bottom: 1px solid black" > 
-            <span class="achievements-values" value="9.4" > 1.0</span>
-         </div>
-         <p class="achievement-areas"> CGPA </p>
-     </div>
-    <div>
-         <img class="achievement-svgs" src="projects_svg.svg" width="90px"> 
-           <div style="display:  inline-block;width:  80px;border-bottom: 1px solid black" > 
-            <span class="achievements-values" value="5" >  0</span>
-           </div> 
-         <p class="achievement-areas"> Projects </p>
-          <ul class="achievements-description">
-             <li> Sorting Visualizer </li>
-             <li> Image processing Tool </li>
-             <li>  Customer Segmentation</li>
-             <li> Tic-Tac-Toe AI </li>
-             <li> Data visualation dashboard </li>
-           </ul>
-    </div>
-     <div>
-         <img class="achievement-svgs" src="internships_svg.svg" width="100px">
-         <div style="display:  inline-block;width:  80px;border-bottom: 1px solid black" > 
-         <span class="achievements-values" value="3" > 0 </span>
-          </div>
-         <p class="achievement-areas"> Internships </p>
-         <ul class="achievements-description">
-             <li> Research intern <br> (Carnegie Mellon University) </li>
-             <li> Web Developer <br>(360ResearchFoundation) </li>
-             <li> AWS Student Intern <br>(APSSDC) </li>
-         </ul>
-     </div>
-     <div>
-         <img class="achievement-svgs" src="scholarships_svg.svg" width="100px">
-         <div style="display:  inline-block;width:  80px;border-bottom: 1px solid black" > 
-         <span class="achievements-values" value="2"  > 0 </span>
-          </div>
-         <p class="achievement-areas"> Scholarships </p>
-     </div>
-  </div>
-</div>
-
-<div style="margin: 50px;margin-top: 30px;margin-bottom: 20px">
-    <p style="font-family: 'Kantumruy Pro', sans-serif;
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 55px;
-/* or 154% */
-align-items: center;
-letter-spacing: 0.015em;
-
-color: #3100BC;"> SKILLS </p>
-    <p style="font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 1.2em;
-line-height: 37px;
-/* or 239% */
 
 
-color: #000000;"> Progress of me as an engineer reflects in my skills. My  passion towards bridging the practical exposure and theoritical computer science made me earn these skills.  </p>
-  <div style="display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-between;background: #EDE1FF;width: 80%;margin: auto;">
-    <div class="skill-containers">
-            <svg  class="skill-animation" id="whole1" width="150" height="150" 
-            xmlns="http://www.w3.org/2000/svg" >   
-           <circle cx="75" cy="75" r="65" stroke="black" stroke-width="1" fill="white"/>
-          <circle class="progress-ring__circle" stroke="#4B2CA3" stroke-width="20" fill="transparent"
-     r="55" cx="75" cy="75" percent="95" />
-          <circle cx="75" cy="75" r="50" fill="#EDE1FF" />
-        <text x="50" y="80" class="skill-text"> Python </text>
-          </svg>
-
-    </div>
-    <div class="skill-containers">
-       <svg  class="skill-animation" id="whole2" width="150" height="150" 
-            xmlns="http://www.w3.org/2000/svg" >   
-           <circle cx="75" cy="75" r="65" stroke="black" stroke-width="1" fill="white"/>
-          <circle class="progress-ring__circle" stroke="#4B2CA3" stroke-width="20" fill="transparent"
-     r="55" cx="75" cy="75" percent="80"/>
-          <circle cx="75" cy="75" r="50" fill="#EDE1FF" />
-           <text x="50" y="80" class="skill-text"> Flask </text>
-          </svg>
-           <!-- <circle r="8" fill="red">
-               <animateMotion dur="5s" repeatCount="indefinite"
-                path="M120 10
-                A110 110 0 1 1 42.22 42.22 L63.44 63.44 L120 40 L120 10" />
-           </circle> -->
-          <!--  <path d="M 0,70 A 65,70 0 0,0 65,0 5,5 0 0,1 75,0 75,70 0 0,1 0,70Z" fill="#FFF">
-      <animateTransform attributeName="transform" type="rotate" from="360 0 0" to="0 0 0" dur="1s" repeatCount="indefinite" />
-    </path> -->
-        
-    </div>
-    <div class="skill-containers">
-           <svg  class="skill-animation" id="whole3" width="150" height="150" 
-            xmlns="http://www.w3.org/2000/svg" >   
-           <circle cx="75" cy="75" r="65" stroke="black" stroke-width="1" fill="white"/>
-         
-          <circle class="progress-ring__circle" stroke="#4B2CA3" stroke-width="20" fill="transparent"
-     r="55" cx="75" cy="75" percent="90"/>
-          <circle cx="75" cy="75" r="50" fill="#EDE1FF" />
-           <text x="65" y="80" class="skill-text"> Js </text>
-          </svg>
-
-    </div>
-    <div class="skill-containers">
-           <svg  class="skill-animation" id="whole4" width="150" height="150" 
-            xmlns="http://www.w3.org/2000/svg" >   
-           <circle cx="75" cy="75" r="65" stroke="black" stroke-width="1" fill="white"/>
-         
-          <circle class="progress-ring__circle" stroke="#4B2CA3" stroke-width="20" fill="transparent"
-     r="55" cx="75" cy="75" percent="75"/>
-          <circle cx="75" cy="75" r="50" fill="#EDE1FF" />
-           <text x="50" y="80" class="skill-text"> HTML </text>
-          </svg>
-    </div>
-     <div class="skill-containers">
-            <svg  class="skill-animation" id="whole5" width="150" height="150" 
-            xmlns="http://www.w3.org/2000/svg" >   
-           <circle cx="75" cy="75" r="65" stroke="black" stroke-width="1" fill="white"/>
-         
-          <circle class="progress-ring__circle"  stroke="#4B2CA3" stroke-width="20" fill="transparent"
-     r="55" cx="75" cy="75" percent="67"/>
-          <circle cx="75" cy="75" r="50" fill="#EDE1FF" />
-          <text x="50" y="80" class="skill-text"> Django</text>
-          </svg>
-
-    </div>
-    <div class="skill-containers">
-           <svg  class="skill-animation" id="whole6"   width="150" height="150" 
-            xmlns="http://www.w3.org/2000/svg" >   
-           <circle cx="75" cy="75" r="65" stroke="black" stroke-width="1" fill="white"/>
-         
-          <circle class="progress-ring__circle" stroke="#4B2CA3" stroke-width="20" fill="transparent"
-     r="55" cx="75" cy="75" percent="70"/>
-          <circle cx="75" cy="75" r="50" fill="#EDE1FF" />
-           <text x="65" y="80" class="skill-text"> C++ </text>
-          </svg>
-
-    </div>
-  </div>
-
-</div>
-
-<div id="courses-section">
-  <div id="courses-heading">
-   Courses and Specialiasations
-   </div>
-
-<div id="all-course-container">  
-    <div  class="each-course" style="display: inline-block">
-        <div> 
-        <img class="course-svgs" style="width: 15%;"src="stanford_sticker.svg" >
-        <span class="course-name"> Stanford Machine Learning </span> 
-       </div>
-        <div class="course-description" >
-             Stanford Machine learning course <br>is a fundamental  and  practical <br>understanding of Machine <br>Learning.The course covers basics <br> of ML,several models , practical<br> hacks in ML .
-          </div>
-    </div>
-
-     <div  class="each-course" style="display: inline-block">
-        <div> 
-        <img   class="course-svgs"  style="width:  55%"src="harvard_sticker.svg" >
-        <span class="course-name"> CS50X</span> 
-       </div>
-        <div class="course-description" >
-             Stanford Machine learning course <br>is a fundamental  and  practical <br>understanding of Machine <br>Learning.The course covers basics <br> of ML,several models , practical<br> hacks in ML .
-          </div>
-      </div>
-   
-    <div  class="each-course" style="display: inline-block">
-        <div> 
-        <img class="course-svgs"  src="deeplearningai_sticker.svg" >
-        <span class="course-name"> Deep Learning Specialization</span> 
-       </div>
-        <div class="course-description" >
-             Stanford Machine learning course <br>is a fundamental  and  practical <br>understanding of Machine <br>Learning.The course covers basics <br> of ML,several models , practical<br> hacks in ML .
-          </div>
-    </div>
-    
-
-    <div  class="each-course" style="display: inline-block">
-        <div> 
-        <img class="course-svgs"  src="tensorflow_sticker.svg" >
-        <span class="course-name"> Introduction to Tensorflow</span> 
-       </div>
-        <div class="course-description" >
-           Stanford Machine learning course <br>is a fundamental  and  practical <br>understanding of Machine <br>Learning.The course covers basics <br> of ML,several models , practical<br> hacks in ML .
-          </div>
-    </div>
-
-   <div  class="each-course" style="display: inline-block">
-        <div> 
-        <img class="course-svgs"  src="googlepython_sticker.svg" >
-        <span class="course-name"> Google Python  Crash Course</span> 
-        </div>
-        <div class="course-description" >
-             Stanford Machine learning course <br>is a fundamental  and  practical <br>understanding of Machine <br>Learning.The course covers basics <br> of ML,several models , practical<br> hacks in ML .
-          </div>
-    </div>
 
 
-   <div  class="each-course" style="display: inline-block">
-        <div> 
-        <img class="course-svgs" style="width: 35%" src="amazon_sticker.svg" >
-        <span class="course-name"> Udacity AWS ML</span> 
-       </div>
-        <div class="course-description" >
-             Stanford Machine learning course <br>is a fundamental  and  practical <br>understanding of Machine <br>Learning.The course covers basics <br> of ML,several models , practical<br> hacks in ML .
-        </div>
-    </div>
- </div>
 
-</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const icons = document.querySelectorAll('.withprogress');
+        let delay = 500;
 
-<div id="contact-section"> 
-    <div id="contact-heading"> <span id="heading-text">Contact Me </span></div>
-    <div id="contact-container" class="pt1">
-    <!--     
-        <div id="feel-free"> Feel Free to reach out to me</div>
- -->    <!--     <div  id="personal-info-container" >
-           <div id="pinfo-name"> @Mitra Datta </div>
-           <div class="info-section"> 
-                 <div class="rows">
-                   <div class="first-column" > Degree </div> 
-                   <div class="second-column"> B.Tech in Computer Science <br>Engineering (2019-2023) </div>
-                 </div>
-                 <div class="rows">
-                  <div class="first-column" > Age </div> 
-                 <div class="second-column"> 21</div>
-                 </div>
-                 <div class="rows">
-                  <div class="first-column" > Ambition</div>  
-                  <div class="second-column"> Help for betterment of world <br>using the knowledge at hand</div>
-                </div>
-                <div class="rows">
-                  <div class="first-column" > Experience </div> 
-                  <div class="second-column"> CMU Research intern, Front-<br>end intern </div>
-                </div>
-               
-            </div>
-        </div>
- -->
-        <!-- <div>
-         <object data="Socialmedia_curve.svg" style="width: 218px;"> </object>
-        </div>
- -->  
-        <div style="background: white">
-       <center><img class="profile-pic" src="profile_pic1.png" > </center>
-        </div>
-        <div style="display: flex;justify-content: space-evenly;margin: 20px">
-         <div class="contact-bubbles " >
-            <div class="contact-me-headings"> #Personal </div>
-             <div>
-               <!--  <div class="contact-me-side-icon"> </div>
- -->                <img style="vertical-align: middle;"src="mail_icon.png" width="50px">  
-                     <span>  gmitradatta@gmail.com </span>
-              </div>
-        </div>
-         <div class="contact-bubbles animating-2">
-            <div class="contact-me-headings"> #Social Network </div>
-             <div>
-                <!-- <div class="contact-me-side-icon contact-icons"> </div>  -->
-                <img class="contact-icons" src="github_icon.svg" >
-                <img class="contact-icons" src="linkedin_icon.svg" >
-                <img class="contact-icons" src="discord_icon.svg" >
-                <img class="contact-icons" src="stackoverflow_icon.svg" >
-              </div>
-        </div>
-      </div>
+        icons.forEach((icon, index) => {
+        setTimeout(() => {
+            icon.classList.add('bubble');
 
-</div>
+            // Remove the 'bubble' class after the animation ends
+            icon.addEventListener('animationend', function() {
+                icon.classList.remove('bubble');
+                icon.style.opacity = '1';
+            }, { once: true });
+        }, delay);
+        delay += 100; // Adjust delay as needed
+    });
+});
 
+function filterProjects(category) {
+            const allProjects = document.querySelectorAll('.project-card');
+
+            allProjects.forEach(function(card) {
+                if (category === 'All' || card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                    card.classList.add("appear");
+                    setTimeout(function() {
+            card.classList.remove("appear");
+        }, 1000); 
+
+                } else {
+                    card.classList.add('hidden');
+                    // card.classList.remove("appear");
+                }
+            });
+        }
+
+        document.getElementById('all-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('All');
+        });
+
+        document.getElementById('system-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('s');
+        });
+
+        document.getElementById('web-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('w');
+        });
+
+        document.getElementById('ml-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('m');
+        });
+
+        // Initialize with all projects visible
+        filterProjects('All');
+
+
+
+        document.querySelectorAll('.filter a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Remove "active" class from all links
+        document.querySelectorAll('.filter a').forEach(function(link) {
+            link.classList.remove('active');
+        });
+
+        // Add "active" class to the clicked link
+        this.classList.add('active');
+    });
+});
+</script>
 
 <script src="./scrolled_into_view_check.js"> </script>
 
