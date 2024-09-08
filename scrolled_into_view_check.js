@@ -82,7 +82,7 @@ function numberanimate(skillelement,x)
 {
    skillvalue = skillelement.getAttribute('value');
    var value = parseInt(skillvalue);
-   console.log(skillelement,x,value);
+
    var c=300;
    // console.log(x);
    skillelement.innerText = parseInt(0);
@@ -187,7 +187,7 @@ function classadd(element,class_name)
 
 function check_class_existence(element,class_name)
 {
-  
+
    const class_list = element.classList;
    // console.log(class_list);
     for(let i of class_list)
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
       entries.forEach(entry => {
 
         let svgElement = entry.target;
-        console.log(svgElement);
+     
           if (entry.isIntersecting) {
                   svgElement.style.transition = 'width 1s ease-out';  
 
@@ -270,6 +270,106 @@ document.addEventListener("DOMContentLoaded", function() {
       observer.observe(elements[i]);
   }
 });
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const icons = document.querySelectorAll('.withprogress');
+        let delay = 500;
+
+        icons.forEach((icon, index) => {
+        setTimeout(() => {
+            icon.classList.add('bubble');
+
+            // Remove the 'bubble' class after the animation ends
+            icon.addEventListener('animationend', function() {
+                icon.classList.remove('bubble');
+                icon.style.opacity = '1';
+            }, { once: true });
+        }, delay);
+        delay += 100; // Adjust delay as needed
+    });
+});
+
+function filterProjects(category) {
+            const allProjects = document.querySelectorAll('.project-card');
+
+            allProjects.forEach(function(card) {
+                if (category === 'All' || card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                    card.classList.add("appear");
+                    setTimeout(function() {
+            card.classList.remove("appear");
+        }, 1000); 
+
+                } else {
+                    card.classList.add('hidden');
+                    // card.classList.remove("appear");
+                }
+            });
+        }
+
+        document.getElementById('all-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('All');
+        });
+
+        document.getElementById('system-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('s');
+        });
+
+        document.getElementById('web-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('w');
+        });
+
+        document.getElementById('ml-projects').addEventListener('click', function(event) {
+            event.preventDefault();
+            filterProjects('m');
+        });
+
+        // Initialize with all projects visible
+        filterProjects('All');
+
+
+
+        document.querySelectorAll('.filter a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Remove "active" class from all links
+        document.querySelectorAll('.filter a').forEach(function(link) {
+            link.classList.remove('active');
+        });
+
+        // Add "active" class to the clicked link
+        this.classList.add('active');
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const sectionTitle = document.querySelectorAll('.section-title');
+    
+    const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear-heading');
+        entry.target.classList.remove('hidden-heading');
+      } else {
+        entry.target.classList.add('hidden-heading');
+        entry.target.classList.remove('appear-heading');
+      }
+    });
+    });
+    
+    let elements = document.getElementsByClassName("section-title");
+  for (let i = 0; i < elements.length; i++) {
+      observer.observe(elements[i]);
+  }
+  });
+
+
 
 let options = {
     root: null,

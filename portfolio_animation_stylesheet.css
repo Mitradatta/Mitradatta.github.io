@@ -417,3 +417,25 @@
 {
     animation:  fullout 0.4s linear forwards 0.5s;
 }*/
+
+@keyframes contentreveal {
+
+    0% {
+    opacity:  0; 
+     margin-left:  70px;
+    }
+  
+    100% {
+        opacity:  1;
+        margin-left:  0;
+    }
+  }
+  
+  
+  .hidden-heading {
+    opacity: 0;
+  }
+  
+  .appear-heading {
+   animation: contentreveal 2s ease forwards 1;  
+  }
