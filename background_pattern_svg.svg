@@ -1,9 +1,0 @@
-<svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<style>
-#background_pattern_svg
-{
-	padding: 20px;
-}
-</style>
-<circle id="background_pattern_svg" cx="3" cy="3" r="3" fill="#3C3C3C"/>
-</svg>
