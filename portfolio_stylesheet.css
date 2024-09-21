@@ -1336,3 +1336,176 @@ margin-top: 20px;
 font-size: 18px;
 color: #666;
 }
+
+
+.menu-icon {
+    position: relative;
+    top: 10px;
+    right: -49.5%; /* Move it outside the navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.5s ease;
+    border-radius: 2px;
+}
+
+
+.menu-icon .line {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    border-radius: 2px; 
+}
+
+/* Custom vertical scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px; /* Width for vertical scrollbar */
+    height: 12px; /* Height for horizontal scrollbar, set to keep default height */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track background color */
+    border-radius: 10px; /* Rounded track for vertical scrollbar */
+   
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:rgb(75, 44, 163); /* Thumb color */
+    border-radius: 10px; /* Rounded thumb for vertical scrollbar */
+    border: 3px solid #f1f1f1; /* Border for thumb to match track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(50, 25, 116) /* Hover effect for thumb */
+}
+
+/* Target horizontal scrollbar and reset it */
+::-webkit-scrollbar:horizontal {
+    height: 12px; /* Reset to default height (change if desired) */
+    background: transparent; /* Transparent background to resemble default behavior */
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: initial; /* Keep the default appearance for the thumb */
+    border-radius: 0; /* Remove rounding from horizontal scrollbar */
+    border: none; /* Remove any border for horizontal scrollbar thumb */
+}
+
+/* Firefox scrollbar: Affects both horizontal and vertical */
+body {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgb(75, 44, 163)#f1f1f1; /* Thumb and track color for both scrollbars in Firefox */
+}
+
+.research-img {
+    background-size: cover;  /* Cover the entire container */
+    background-position: center; /* Center the image */  
+    border-radius: 10px; height: 300px;width: 600px;
+    position: relative;  /* Needed for the icon positioning */
+    cursor: pointer;   
+    transition: background-size 0.7s, opacity 0.3s ease;
+    
+}
+
+#research1 {
+    background-image: url(./images/research1.png);
+    
+}
+
+#research2 {
+    background-image: url(./images/research2.png);
+    
+}
+
+.research-txt {
+    text-align: justify;
+}
+
+.magnifier-icon {
+    position: absolute;
+    top: 50%;             /* Vertically center the icon */
+    left: 50%;            /* Horizontally center the icon */
+    transform: translate(-50%, -50%);  /* Adjust for perfect centering */
+    font-size: 50px;      /* Set icon size */
+    color: white;         /* White icon for contrast */
+    visibility: hidden;   /* Hidden by default */
+    transition: visibility 0.3s, opacity 0.3s ease;  /* Smooth fade-in */
+    opacity: 0;
+    z-index: 2;           /* Ensure the icon stays above the background */
+}
+
+.research-img::before {
+    content: '';  /* Creates a pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-research-image.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: background 0.5s ease, filter 0.5s ease;  /* Smooth transition */
+    filter: none;  /* No blur initially */
+    background-color: rgba(0, 0, 0, 0);  /* Transparent by default */
+}
+
+.research-img:hover::before {
+    background-color: rgba(139, 134, 134, 0.4);  /* Slight black tint */
+    filter: blur(5px);  /* Blur only the background */
+    background-blend-mode: darken;  /* Blend the tint with the background */
+}
+
+
+
+.research-img:hover .magnifier-icon {
+    visibility: visible;  /* Make the icon visible */
+    opacity: 1;   
+          /* Fade in the icon */
+}
+
+/* Optional: Hover effect for background image (magnifying zoom effect) */
+
+
+
+.roles-interests-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  /* Makes the boxes wrap into new lines if needed */
+}
+
+.roles-interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+  font-weight: bold;
+  display: inline-block;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 15px;
+    background-color: #f4f4f9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .box {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
+}

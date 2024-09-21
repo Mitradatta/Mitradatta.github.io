@@ -151,6 +151,46 @@ body {
 /* Optional: Hover effect for background image (magnifying zoom effect) */
 
 
+
+.roles-interests-container {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  /* Makes the boxes wrap into new lines if needed */
+}
+
+.roles-interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+  font-weight: bold;
+  display: inline-block;
+  color: #333;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 15px;
+    background-color: #f4f4f9;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .box {
+    font-size: 1em;
+    padding: 8px 15px;
+  }
+}
+
   </style> 
 <body> 
 	
@@ -165,10 +205,10 @@ body {
         <img id="profile_pic" src="./images/profile-pic2.png" alt="Profile Photo">
         <p style="border-top: 2px solid #c93636; margin-top: 10px;">Mitra Datta</p>
         <div class="social-icons">
-            <a href="https://github.com/your-profile" target="_blank"> 
+            <a href="https://github.com/Mitradatta" target="_blank"> 
                 <img id="linkedin" src="./svg_collection/skill_logos/github-logo.svg" alt="github logo">
             </a>
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank">
+            <a href="https://www.linkedin.com/in/mitra-datta-ganapaneni-47774b192/" target="_blank">
                 <img id="linkedin" src="./svg_collection/skill_logos/linkedin-logo.svg" alt="linkedin logo">
              </a>
         </div>
@@ -224,13 +264,29 @@ body {
                                 <p>
                                     I am also an avid contributor to tech communities, sharing knowledge and learning from global professionals. Let's connect and collaborate on exciting ventures in technology and innovation! 🌟📡
                                 </p> -->
-                    
                             </div>
+                          
+                
                    
                         </div>
                         <div style="margin: auto;">
                         <object data="./avatar_designs/avatar_final_animated_version.svg" class="avatar"></object>
+                
                         </div>
+                        
+                    </div>
+                    <div class="roles-interests-container">
+                      <div class="roles-interests">
+                        <p>
+                          <span class="box">🛠️ ML Engineer</span> 
+                          <span class="box">💻 Software Engineer</span> 
+                          <span class="box">⚙️ Full Stack Developer</span> 
+                          <span class="box">🧠 Natural Language Processing (NLP)</span> 
+                          <span class="box">🖼️ Computer Vision</span> 
+                          <span class="box">🔍 Data Science</span> 
+                          <span class="box">🏎️ Scalability & Optimization</span>
+                        </p>
+                      </div>
                     </div>
         
                     
