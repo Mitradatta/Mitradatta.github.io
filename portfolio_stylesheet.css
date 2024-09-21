@@ -1509,3 +1509,56 @@ body {
     padding: 8px 15px;
   }
 }
+
+#affiliations {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  #affiliations h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .company-grid {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin-top: 30px;
+  }
+  
+  .company-item {
+  
+  
+    background: inherit;
+   
+    text-align: center;
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+    align-content: center;
+    background-color:#00000000;
+  }
+  
+  .company-item img {
+    max-width: 150px;
+    height: auto;
+  
+  }
+  
+  .company-item p {
+    font-size: 1.1em;
+    color: #555;
+  }
+  
+  .company-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .company-item img {
+      max-width: 80px;
+    }
+  }
+  
