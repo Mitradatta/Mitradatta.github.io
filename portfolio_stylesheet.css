@@ -1511,54 +1511,65 @@ body {
 }
 
 #affiliations {
-    padding: 40px;
     text-align: center;
+    padding: 20px;
   }
   
-  #affiliations h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+  #affiliations h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
     color: #333;
   }
   
-  .company-grid {
+  /* Container for scrolling content */
+  .scroll-container {
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Scrolling content */
+  .scrolling-content {
     display: flex;
-    justify-content: space-evenly;
-    justify-items: center;
-    margin-top: 30px;
+    justify-content: space-between;
+    align-items: center;
+    animation: scroll-left 15s linear infinite;
+    /* Make content continue scrolling without abrupt stops */
   }
   
-  .company-item {
-  
-  
-    background: inherit;
-   
-    text-align: center;
-    margin-right: 30px;
-    transition: transform 0.3s ease;
-    align-content: center;
-    background-color:#00000000;
+  .affiliation-item {
+    flex: 0 0 auto;
+    margin: 0 30px;
   }
   
-  .company-item img {
-    max-width: 150px;
+  .affiliation-item img {
+    width: 120px;
     height: auto;
-  
+    display: block;
+    object-fit: contain;
+    transition: transform 0.3s ease;
   }
   
-  .company-item p {
-    font-size: 1.1em;
-    color: #555;
+  .affiliation-item img:hover {
+    transform: scale(1.1);
   }
   
-  .company-item:hover {
-    transform: translateY(-10px);
+  /* Keyframes for left-side scrolling */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100%));
+    }
   }
   
   /* Responsive design for smaller screens */
   @media (max-width: 768px) {
-    .company-item img {
-      max-width: 80px;
+    .affiliation-item img {
+      width: 80px;
     }
   }
+  
   

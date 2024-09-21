@@ -18,58 +18,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
   <style> 
-#affiliations {
-  padding: 40px;
-  text-align: center;
-}
-
-#affiliations h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.company-grid {
-  display: flex;
-  justify-content: space-evenly;
-  justify-items: center;
-  margin-top: 30px;
-}
-
-.company-item {
-
-
-  background: inherit;
- 
-  text-align: center;
-  margin-right: 30px;
-  transition: transform 0.3s ease;
-  align-content: center;
-  background-color:#00000000;
-}
-
-.company-item img {
-  max-width: 150px;
-  height: auto;
-
-}
-
-.company-item p {
-  font-size: 1.1em;
-  color: #555;
-}
-
-.company-item:hover {
-  transform: translateY(-10px);
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .company-item img {
-    max-width: 80px;
-  }
-}
-
 
   </style> 
 <body> 
@@ -541,28 +489,41 @@
                 <!-- <div style="margin: auto;width: 100%;height: 90vh;margin-top: 40px;margin-bottom: 40px;">
                 <iframe src="my_resume.pdf#zoom=125" style="width:100%;height: 90vh;" ></iframe>
                 </div> -->
-
                 <section id="affiliations">
-                  <h3>Affiliated Companies and Universities</h3>
-                  <div class="company-grid">
-                    <div class="company-item">
-                      <img src="./images/cmu.gif" alt="Company 1" />
+                  <h3>Affiliated Companies & Universities</h3>
+                  <div class="scroll-container">
+                    <div class="scrolling-content">
+                      <!-- Original Content -->
+                      <div class="affiliation-item">
+                        <img src="./images/cmu.gif" alt="Carnegie Mellon University" />
+                      </div>
+                      <div class="affiliation-item">
+                        <img src="./images/umass-amherst.png" alt="University of Massachusetts Amherst" />
+                      </div>
+                      <div class="affiliation-item">
+                        <img src="./images/next-tech-lab.png" alt="Next Tech Lab" />
+                      </div>
+                      <div class="affiliation-item">
+                        <img src="./images/srm-ap.png" alt="SRM University AP" />
+                      </div>
+                
+                      <!-- Cloned Content for seamless looping -->
+                      <div class="affiliation-item">
+                        <img src="./images/cmu.gif" alt="Carnegie Mellon University" />
+                      </div>
+                      <div class="affiliation-item">
+                        <img src="./images/umass-amherst.png" alt="University of Massachusetts Amherst" />
+                      </div>
+                      <div class="affiliation-item">
+                        <img src="./images/next-tech-lab.png" alt="Next Tech Lab" />
+                      </div>
+                      <div class="affiliation-item">
+                        <img src="./images/srm-ap.png" alt="SRM University AP" />
+                      </div>
                     </div>
-                    <div class="company-item">
-                      <img src="./images/umass-amherst.png" alt="Company 2" />
-                    </div>
-                    <div class="company-item">
-                      <img src="./images/next-tech-lab.png" alt="University 1" />
-      
-                    </div>
-                    <div class="company-item">
-                      <img src="./images/srm-ap.png" alt="University 1" />
-      
-                    </div>
-
-            
                   </div>
                 </section>
+                
         
                 <div id="contact-heading" style="margin: 10px;margin-top: 50px;margin-bottom: 50px;"> <span id="heading-text">Contact Me </span></div>
                 <div class="contact-section">
@@ -616,6 +577,8 @@
       "https://www.linkedin.com/in/mitradatta"
     ]
   }
+
+  
   </script>
  
 </body>
